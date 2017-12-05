@@ -22,16 +22,17 @@ func f(in1 int, args ...interface{}) (o fout) {
 	o.n2 = 10
 	o.t = time.Now()
 	o.p = nil
-	// parsing arguments
-	l := len(args)
-	if l > 0 {
-		o.n2 = args[0].(int)
-	}
-	if l > 1 {
-		o.t = args[1].(time.Time)
-	}
-	if l > 2 {
-		o.p = args[2].(*point)
+	for _, arg := range args {
+		switch v := arg.(type) {
+		case int:
+			o.n2 = arg.(int)
+		case time.Time:
+			o.t = arg.(time.Time)
+		case *point:
+			o.p = arg.(*point)
+		default:
+			fmt.Println("unexpected type %T", v)
+		}
 	}
 	return
 }
@@ -51,4 +52,14 @@ func main() {
 	// Output: 2013-02-03 00:00:00 +0000 UTC
 	fmt.Println(f(77, 321).t)
 	// Output: now
+	fmt.Println(f(77, 321, tmp, &point{10, 20, 255}))
+	// Output:
+	// {77 321 {63495446400 0 <nil>} 0xc42000a3e0}
+	// ---- Part 2 ----
+	fmt.Println(f(77, tmp).t)
+	// Output:
+	// 2013-02-03 00:00:00 +0000 UTC
+	fmt.Println(f(10, &point{1, 2, 3}))
+	// Output:
+	// {10 10 {63648089695 53667753 0x50ed80} 0xc42000a480}
 }

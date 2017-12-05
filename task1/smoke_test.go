@@ -57,3 +57,11 @@ func Test_p_default_value_is_nil(t *testing.T) {
 		t.Errorf("Test failed with %d, expected nil", p_res)
 	}
 }
+
+
+func Test_different_order_1(t *testing.T) {
+	p_res := f(11, &point{1,2,3}).n2
+	if p_res != 10 {
+		t.Errorf("Test failed with %d, expected %d", p_res, 10)
+	}
+}
