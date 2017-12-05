@@ -45,13 +45,18 @@ Canceled (Process exited with code 137)
 
 
 ```
-go test -v
-=== RUN   Test_parse1
---- PASS: Test_parse1 (0.00s)
-=== RUN   Test_parse2
---- PASS: Test_parse2 (0.00s)
-=== RUN   Test_parse3
---- PASS: Test_parse3 (0.00s)
+=== RUN   Test_parse_passed_value_with_number
+--- PASS: Test_parse_passed_value_with_number (0.00s)
+=== RUN   Test_parse_passed_with_incorrect_data
+--- PASS: Test_parse_passed_with_incorrect_data (0.00s)
+=== RUN   Test_parse_test_failed_with_number
+--- PASS: Test_parse_test_failed_with_number (0.00s)
+=== RUN   Test_parse_test_failed_with_incorrect_data
+--- PASS: Test_parse_test_failed_with_incorrect_data (0.00s)
+=== RUN   Test_parse_test_failed_which_should_be_ignored
+--- PASS: Test_parse_test_failed_which_should_be_ignored (0.00s)
+=== RUN   Test_parse_Muted_are_with_Ignored
+--- PASS: Test_parse_Muted_are_with_Ignored (0.00s)
 PASS
-ok  	_/tasks2	0.001s
+ok  	_/task2	0.002s
 ```
