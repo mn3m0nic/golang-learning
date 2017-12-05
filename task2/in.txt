@@ -1,0 +1,15 @@
+Tests passed: 64
+Tests failed: 2 (1 new), passed: 173, ignored: 6, muted: 3; process exited with code 1
+Tests failed: 4 (3 new), passed: 55; process exited with code 1
+Tests failed: 5 (1 new), passed: 125; process exited with code 1
+Tests failed: 1 (1 new), passed: 310, ignored: 13; process exited with code 1
+Tests passed: 311, ignored: 13
+Tests failed: 1 (1 new), passed: 0; process exited with code 1
+Tests failed: 3 (2 new), passed: 174, ignored: 7, muted: 1; process exited with code 1
+Tests passed: 2, failed: 173, muted: 6, ignored: 3; process exited with code 1
+Tests failed: 15, passed: 151; process exited with code 1
+Success
+Process exited with code 1
+Canceled
+Snapshot dependency builds failed: 1
+Canceled (Process exited with code 137)
