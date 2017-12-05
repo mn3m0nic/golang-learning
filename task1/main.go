@@ -1,15 +1,6 @@
 package main
-/* 1) Write a function that takes a one required parameter int and three optional: 
-first - int, default value 10
-second - time.Time, default time.Now()
-third - pointer to any struct, default - nil
-The function should return all passed parameters.
-Write unit tests for this function.
-*/
 import ( 
- // "os"
   "fmt"
- // "strconv"
   "time"
 )
 type point struct {
@@ -17,8 +8,6 @@ type point struct {
   y int
   value int
 }
-
-
 func f(in1 int, args ...interface{}) (n1,n2 int, t time.Time, p *point)   {
   n1=in1
   n2=10
@@ -34,9 +23,8 @@ func f(in1 int, args ...interface{}) (n1,n2 int, t time.Time, p *point)   {
   if l>2 {
     p=args[2].(*point)
   }
-   return
+  return
 }
-
 func main() {
   fmt.Println(f(77))
   fmt.Println(f(77,321))
