@@ -1,0 +1,27 @@
+
+
+
+
+
+## Testing 
+
+### Testing by execution 
+
+
+```
+=== RUN   Test_f1
+77 10 2017-12-05 10:52:07.07844806 +0300 +03 <nil>
+--- PASS: Test_f1 (0.00s)
+=== RUN   Test_f2
+77 321 2017-12-05 10:52:07.078523533 +0300 +03 <nil>
+--- PASS: Test_f2 (0.00s)
+=== RUN   Test_f3
+77 321 2013-02-03 00:00:00 +0000 UTC <nil>
+--- PASS: Test_f3 (0.00s)
+=== RUN   Test_f4
+77 321 2013-02-03 00:00:00 +0000 UTC &{10 50 255}
+--- PASS: Test_f4 (0.00s)
+PASS
+ok  	_/home/mn3m/epam/bench/golang/task1-3	0.001s
+
+```
