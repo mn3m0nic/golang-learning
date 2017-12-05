@@ -1,2 +1,2 @@
 export TMPDIR=`pwd`/tmp
-mkdir $TMPDIR
+mkdir -p "$TMPDIR"
