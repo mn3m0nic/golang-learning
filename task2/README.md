@@ -52,5 +52,5 @@ go test -v
 === RUN   Test_parse3
 --- PASS: Test_parse3 (0.00s)
 PASS
-ok  	_/home/mn3m/epam/bench/golang/tasks2-1	0.001s
+ok  	_/tasks2	0.001s
 ```
