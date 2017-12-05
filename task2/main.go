@@ -20,10 +20,6 @@ func filtern(st, reg string) (number int64) {
   return
 }
 func parse(st string) (t tests) {
-  //fmt.Printf("f=%v p=%v i+m=%v\n", 
-  //   filtern(st, "(Tests|,) failed"), 
-  //   filtern(st, "passed"),
-  //   filtern(st, "ignored")+filtern(st, "muted"))
   t.failed =  filtern (st, "(Tests|,) failed")
   t.passed =  filtern (st, "passed")
   t.ignored = filtern (st, "ignored") + filtern (st, "muted")
