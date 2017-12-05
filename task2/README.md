@@ -19,9 +19,10 @@ Snapshot dependency builds failed: 1
 Canceled (Process exited with code 137)
 ```
 
-### Output file
+### Program output 
 
 ```
+./main
 {0 64 0}
 {2 173 9}
 {4 55 0}
