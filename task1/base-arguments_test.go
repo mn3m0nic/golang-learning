@@ -11,14 +11,6 @@ func Test_n1_single_value (t *testing.T) {
     t.Errorf("Test failed with %d, expected %d",n1_res, 77)
   }
 }
-// Testing n1 is required and can't be skipped
-//func Test_n1_required (t *testing.T) {
-//  n1_res,err:=f().n1
-//  if err==nil {
-//    t.Errorf("First argument is not required which not match task")
-//  }
-//}
-
 
 // Testing default value N2 should be 10
 func Test_n2_default_value (t *testing.T) {
@@ -27,7 +19,6 @@ func Test_n2_default_value (t *testing.T) {
     t.Errorf("Test failed with %d, expected %d",n2_res, 10)
   }
 }
-
 
 // Testing custom n2 is set and returned
 func Test_n2_custom_value (t *testing.T) {
@@ -38,13 +29,23 @@ func Test_n2_custom_value (t *testing.T) {
 }
 
 // Testing custom t default value is NOW 
-// (with acceptable shift 200ms)
+// (with acceptable shift 1000ms)
 func Test_t_default_value_is_NOW (t *testing.T) {
   t_res:=f(77).t
   t_tmp:=time.Now()
   t_diff:=t_tmp.Sub(t_res)
-  if t_diff>200 {
+  if t_diff>1000 {
     t.Errorf("Test failed with %d, expected %d",t_diff,200)
   }
 }
+
+func Test_t_custom_value (t *testing.T) {
+  tmp, _ := time.Parse("2006-Jan-02", "2013-Feb-03")
+  t_res:=f(77,123,tmp).t
+  if t_res!=tmp {
+    t.Errorf("Test failed with %d, expected %d",t_res,tmp)
+  }
+}
+
+
 
