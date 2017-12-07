@@ -31,7 +31,7 @@ func f(in1 int, args ...interface{}) (o fout) {
 		case *point:
 			o.p = arg.(*point)
 		default:
-			fmt.Println("unexpected type %T", v)
+			fmt.Printf("unexpected type %T", v)
 		}
 	}
 	return
